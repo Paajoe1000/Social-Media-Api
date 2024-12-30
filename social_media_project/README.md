@@ -1,24 +1,83 @@
-SOCIAL-MEDIA API
+# Social Media API
+
+A Django-based API for a social media platform that allows users to create posts, follow other users, and view a personalized feed.
+
+# Features
+
+User Registration and Profile Management
+
+Post Creation, Update, and Deletion
+
+Follow/Unfollow Users
+
+User Feed Showing Posts from Followed Users
+
+
+# Installation
+
+Prerequisites
+Python 3.8+
+pip
+
+
+# Setup Instructions
+
+Clone the repository:
+
+git clone https://github.com/yourusername/social-media-api.git
+cd social-media-api
+Create and activate a virtual environment:
+
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+# Set up the database:
+
+python manage.py migrate
+Create a superuser to access the Django admin:
+
+python manage.py createsuperuser
+Run the development server:
+
+python manage.py runserver
+Access the API at http://127.0.0.1:8000/
+
+
+# Usage
+
+To register a new user, send a POST request to /api/users/.
+
+To create a post, send a POST request to /api/posts/.
+
+To follow a user, send a POST request to /api/follow/.
+
+
+
+# API Authentication Setup
 
 Overview
-This project is a Social Media API built using Django and Django REST Framework. It includes core functionalities for managing users, posts, comments, likes, follows, notifications, and user authentication. The goal of this project is to provide a backend for a social media platform where users can interact by creating posts, following other users, commenting on posts, liking content, and receiving notifications for various activities.
 
-Features
-User Management User registration, login, and profile management.
-JWT-based authentication for securing endpoints.
-Profile creation with bio and profile picture (stored in PostgreSQL).
-Post Management Full CRUD operations (create, read, update, delete) for posts.
-Follow System Follow and unfollow other users. Prevent users from following themselves.
-Display a feed of posts from followed users.
-Comment & Like System Comment on posts and view comments.
-Like and unlike posts. Prevent users from liking the same post multiple times.
-Notifications Users receive notifications for likes, comments, and new followers. Notifications system is implemented to ensure users stay informed.
-Tech Stack
-Backend Framework: Django, Django REST Framework
-Database: PostgreSQL
-Authentication: JWT (JSON Web Tokens) via djangorestframework-simplejwt
-Installation
-Prerequisites
-Python 3.x
-PostgreSQL
-Virtual Environment (optional but recommended)
+This document outlines how to set up token-based authentication for your Django API using Django REST Framework (DRF) and SimpleJWT.
+
+
+
+# Installation
+
+
+Make sure to install the required packages:
+
+pip install djangorestframework djangorestframework-simplejwt
+
+
+
+ # Push Changes to GitHub
+
+Once you have implemented this setup, commit your changes and push them to your GitHub repository.
+
+# Conclusion
+
+By following these steps, you should have successfully added basic authentication to your Django API using token-based authentication with Django REST Framework and SimpleJWT. If you have any further questions or run into issues, feel free to ask!
