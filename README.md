@@ -1,4 +1,5 @@
 Social Media API
+
 A Django-based API for a social media platform that allows users to create posts, follow other users, and view a personalized feed.
 
 Features
